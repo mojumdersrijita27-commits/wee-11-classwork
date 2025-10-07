@@ -1,10 +1,10 @@
 def main():
     try:
-        # Try to open the file
-        infile = open("Salaries.txt", "r")  # FileNotFoundError if fails
+        
+        infile = open("Salaries.txt", "r")  
 
-        # Try to read and convert the salary
-        salary = int(infile.readline().strip())  # ValueError if fails
+        
+        salary = int(infile.readline().strip())  
         print("Salary:", salary)
 
     except FileNotFoundError:
@@ -14,14 +14,15 @@ def main():
         print("File Salaries.txt contains an invalid salary.")
 
     else:
-        # Close file if no exception occurred
+        
         infile.close()
 
     finally:
-        # Always executes
+        
         print("Thank you for using our program.")
 
 
-# Run the main function
+
 if __name__ == "__main__":
     main()
+
